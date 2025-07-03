@@ -1,0 +1,24 @@
+[workspace]
+authors = ["Nicolas <nicolas@gres.io>"]
+channels = ["robostack-jazzy", "conda-forge"]
+name = "ros_demo"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[activation]
+scripts = ["install/setup.sh"]
+
+[tasks]
+clean = "rm -rf install build log"
+build = {cmd = "colcon build --symlink-install", inputs = ["src"], outputs = ["install", "build"]}
+node = {cmd = "ros2 run my_package my_node"}
+
+[dependencies]
+ros-jazzy-desktop = "*"
+ros-jazzy-ament-cmake-auto = "*"
+compilers = "*"
+pkg-config = "*"
+cmake = "*"
+ninja = "*"
+colcon-common-extensions = "*"
+setuptools = "*"
