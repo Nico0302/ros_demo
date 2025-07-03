@@ -2,7 +2,7 @@
 authors = ["Nicolas <nicolas@gres.io>"]
 channels = ["robostack-jazzy", "conda-forge"]
 name = "ros_demo"
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
 [activation]
@@ -21,4 +21,4 @@ pkg-config = "*"
 cmake = "*"
 ninja = "*"
 colcon-common-extensions = "*"
-setuptools = "*"
+setuptools = "==68.1.2"
